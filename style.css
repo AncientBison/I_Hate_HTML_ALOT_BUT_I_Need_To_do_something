@@ -1,0 +1,42 @@
+#boards {
+  width: 100%;
+}
+#ot, #pt {
+  margin: 0px;
+  border-collapse: collapse;
+}
+.o, .p, .otr, .ptr {
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle;
+  border-collapse: collapse;
+}
+.o, .p {
+  width: 10vw;
+  height: 10vh;
+  position: relative;
+}
+tbody {
+  width: 100%;
+}
+
+#ot, #pt {
+  width: 100%;
+}
+
+#whole_td {
+  width: 100%;
+}
+
+#boardtd {
+  width: 50%;
+}
+
+#guess {
+  
+}
+
+#guess_container {
+  text-align: center;
+  width: 100%;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <table id = "boards">
+      <tr class = "boardtr">
+        <td class = "boardtd">
+          <table id = "ot">
+            <tr class = "otr">
+              <td id = "o1" class = "o"><span id="ol1">?</span><sub class = "number">1</sub></td>
+              <td id = "o2" class = "o"><span id="ol2">?</span><sub class = "number">2</sub></td>
+              <td id = "o3" class = "o"><span id="ol3">?</span><sub class = "number">3</sub></td>
+              <td id = "o4" class = "o"><span id="ol4">?</span><sub class = "number">4</sub></td>
+              <td id = "o5" class = "o"><span id="ol5">?</span><sub class = "number">5</sub></td>
+              <!-- Click here to guess your opponents word! -->
+            </tr>
+            <tr class = "otr">
+              <td id = "o6" class = "o" onclick = "askForLetter(this)"><span id="ol6">?</span><sub class = "number">6</sub></td>
+              <td id = "o7" class = "o" onclick = "askForLetter(this)"><span id="ol7">?</span><sub class = "number">7</sub></td>
+              <td id = "o8" class = "o" onclick = "askForLetter(this)"><span id="ol8">?</span><sub class = "number">8</sub></td>
+              <td id = "o9" class = "o" onclick = "askForLetter(this)"><span id="ol9">?</span><sub class = "number">9</sub></td>
+              <td id = "o10" class = "o" onclick = "askForLetter(this)"><span id="ol10">?</span><sub class = "number">10</sub></td>
+            </tr>
+            <tr class = "otr">
+              <td id = "o11" class = "o" onclick = "askForLetter(this)"><span id="ol11">?</span><sub class = "number">11</sub></td>
+              <td id = "o12" class = "o" onclick = "askForLetter(this)"><span id="ol12">?</span><sub class = "number">12</sub></td>
+              <td id = "o13" class = "o" onclick = "askForLetter(this)"><span id="ol13">?</span><sub class = "number">13</sub></td>
+              <td id = "o14" class = "o" onclick = "askForLetter(this)"><span id="ol14">?</span><sub class = "number">14</sub></td>
+              <td id = "o15" class = "o" onclick = "askForLetter(this)"><span id="ol15">?</span><sub class = "number">15</sub></td>
+            </tr>
+            <tr class = "otr">
+              <td id = "o16" class = "o" onclick = "askForLetter(this)"><span id="ol16">?</span><sub class = "number">16</sub></td>
+              <td id = "o17" class = "o" onclick = "askForLetter(this)"><span id="ol17">?</span><sub class = "number">17</sub></td>
+              <td id = "o18" class = "o" onclick = "askForLetter(this)"><span id="ol18">?</span><sub class = "number">18</sub></td>
+              <td id = "o19" class = "o" onclick = "askForLetter(this)"><span id="ol19">?</span><sub class = "number">19</sub></td>
+              <td id = "o20" class = "o" onclick = "askForLetter(this)"><span id="ol20">?</span><sub class = "number">20</sub></td>
+            </tr>
+            <tr class = "otr">
+              <td id = "o21" class = "o" onclick = "askForLetter(this)"><span id="ol21">?</span><sub class = "number">21</sub></td>
+              <td id = "o22" class = "o" onclick = "askForLetter(this)"><span id="ol22">?</span><sub class = "number">22</sub></td>
+              <td id = "o23" class = "o" onclick = "askForLetter(this)"><span id="ol23">?</span><sub class = "number">23</sub></td>
+              <td id = "o24" class = "o" onclick = "askForLetter(this)"><span id="ol24">?</span><sub class = "number">24</sub></td>
+              <td id = "o25" class = "o" onclick = "askForLetter(this)"><span id="ol25">?</span><sub class = "number">25</sub></td>
+            </tr>
+          </table>
+        </td>
+        <td class = "boardtd">
+          <table id = "pt">
+            <tr class = "ptr">
+              <td id = "p1" class = "p">?</td>
+              <td id = "p2" class = "p">?</td>
+              <td id = "p3" class = "p">?</td>
+              <td id = "p4" class = "p">?</td>
+              <td id = "p5" class = "p">?</td>
+            </tr>
+            <tr class = "ptr">
+              <td id = "p6" class = "p"></td>
+              <td id = "p7" class = "p"></td>
+              <td id = "p8" class = "p"></td>
+              <td id = "p9" class = "p"></td>
+              <td id = "p10" class = "p"></td>
+            </tr>
+            <tr class = "ptr">
+              <td id = "p11" class = "p"></td>
+              <td id = "p12" class = "p"></td>
+              <td id = "p13" class = "p"></td>
+              <td id = "p14" class = "p"></td>
+              <td id = "p15" class = "p"></td>
+            </tr>
+            <tr class = "ptr">
+              <td id = "p16" class = "p"></td>
+              <td id = "p17" class = "p"></td>
+              <td id = "p18" class = "p"></td>
+              <td id = "p19" class = "p"></td>
+              <td id = "p20" class = "p"></td>
+            </tr>
+            <tr class = "ptr">
+              <td id = "p21" class = "p"></td>
+              <td id = "p22" class = "p"></td>
+              <td id = "p23" class = "p"></td>
+              <td id = "p24" class = "p"></td>
+              <td id = "p25" class = "p"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <div id = "guess_container">
+      <button onclick = "input = prompt('Enter a Guess!')" id = "guess">Guess the word! (Allowed once before you ask for a letter)</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
